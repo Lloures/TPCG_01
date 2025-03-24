@@ -1,0 +1,253 @@
+canvas {
+    background-color: aliceblue;
+    width: 100%;
+    height: 100%;
+  }
+body{
+    background-color: black;
+}
+
+.barra-de-tarefas {
+    background-color: rgb(22, 22, 22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    margin: 15px;
+    border-radius: 25px;
+    position: fixed;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.botao {
+    background-color: transparent;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 120px;
+    text-align: center;
+    font-size: 17px;
+    margin: 5px;
+}
+.botao:hover {
+    background-color: rgba(7, 7, 7, 0.788); 
+}
+.botao:active {
+    background-color: rgba(255, 255, 255, 0.082);
+    color: black;
+}
+
+/* Contêiner Add Forma */
+
+.formas-button {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 12px;
+    border: none;
+    color: white;
+    display: flex;
+    cursor: pointer;
+    font-size: 17px;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .formas-button:hover {
+    background-color: rgb(235, 235, 235);
+    color: rgb(29, 29, 29);
+  }
+
+  #formas-buttons {
+    display: none;
+    position: fixed; 
+    z-index: 1000; 
+    border-radius: 5px;
+    background-color: rgb(29, 29, 29);
+    
+  }
+  
+  #form-container {
+    display: none; 
+    position: fixed;
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    background-color: rgb(10, 10, 10);
+    padding: 10px;
+    z-index: 10;
+    border-radius: 25px;
+    width: 800px;
+    height: 100px;
+}
+
+#form-container.show {
+    display: block; 
+    visibility: visible; 
+}
+
+/* Contêiner Transformações 2D */
+
+#transformacao {
+    display: none;
+    position: fixed;
+    top: 20px; 
+    right: 20px; 
+    background-color: rgb(10, 10, 10);
+    padding: 30px;
+    z-index: 10;
+    border-radius: 25px;
+    color: aliceblue;
+    width: auto;
+    max-width: 300px; 
+    height: auto;
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#transformacao h3 {
+    color: white;
+    text-align: center;
+}
+
+#transformacao .campo {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    gap: 10px;
+}
+
+#transformacao label {
+    color: white;
+    width: 150px; 
+}
+
+#transformacao input {
+    padding: 5px;
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#transformacao input[type="checkbox"] {
+    width: auto; 
+}
+
+#transformacao button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+    margin-top: 10px;
+}
+
+#transformacao button:hover {
+    background-color: #45a049;
+}
+
+#transformacao .reflexao-container {
+    display: flex;
+    gap: 20px; 
+    align-items: center;
+}
+
+#transformacao .reflexao-container input {
+    width: auto;
+}
+
+/* Contêiner Rasterização */
+
+#rasterizacao {
+    display: none;
+    position: fixed;
+    top: 550px; 
+    right: 20px;
+    background-color: rgb(10, 10, 10);
+    padding: 30px;
+    z-index: 10;
+    border-radius: 25px;
+    color: aliceblue;
+    width: auto;
+    max-width: 200px; 
+    height: auto;
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#rasterizacao h3 {
+    color: white;
+    text-align: center;
+}
+
+#rasterizacao .campo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+#rasterizacao input {
+    padding: 5px;
+    width: 100px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.button_rasterizacao{
+    background-color:rgb(66, 66, 66); 
+    color:aliceblue;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    margin: 2px;
+}
+
+/* Contêiner Recorte */
+
+.recorte_container {
+    background-color: rgb(29, 29, 29);
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    position: absolute; 
+    display: none;
+    border-radius: 10px;
+}
+
+.button_recorte {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 12px;
+    border: none;
+    color: white;
+    display: flex;
+    cursor: pointer;
+    font-size: 17px;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .button_recorte:hover {
+    background-color: rgb(235, 235, 235);
+    color: rgb(29, 29, 29);
+  }
+
+  #button_recorte {
+    display: none;
+    position: fixed; 
+    z-index: 1000; 
+    border-radius: 5px;
+    background-color: rgb(29, 29, 29);
+    
+  }
